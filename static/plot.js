@@ -108,7 +108,8 @@ function buildCharts(sample) {
     var barLayout = {
         title: "Top 10 OTUs", 
         xaxis: { title: "Sample Values"}, 
-        yaxis: { title: "OTU IDs"}
+        yaxis: { title: "OTU IDs"}, 
+        hovermode: "closest"
     };
     
       // 10. Use Plotly to plot the data with the layout. 
@@ -154,7 +155,7 @@ function buildCharts(sample) {
         value: washFreq,
         type: 'indicator', 
         mode: 'gauge+number', 
-        title: { text: "Belly Button Washing Frequency <br> Srubs per week" },
+        title: { text: "Belly Button Washing Frequency <br> Scrubs per week" },
         gauge: {
             axis: { range: [null, 10], tickwidth: 1},  
             steps: [
