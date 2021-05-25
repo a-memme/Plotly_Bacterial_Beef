@@ -78,28 +78,23 @@ function buildCharts(sample) {
       // #2 variables are to account for the top 10 (bar chart data)
       // regular variables (without number) used for bubble chart
       var otuIds = newResult.otu_ids;
-      var otuIds2 = newResult.otu_ids.slice(0,10).reverse().map(otuTop => "OTU" + otuTop);
       
       var otuLabels = newResult.otu_labels;
-      var otuLabels2 = newResult.otu_labels.slice(0,10).reverse();
       
       var sampleValues = newResult.sample_values;
       
-      var sampleValues2 = newResult.sample_values.slice(0,10).reverse();
       console.log(otuIds);
 
       // 7. Create the yticks for the bar chart.
       // Hint: Get the the top 10 otu_ids and map them in descending order  
       //  so the otu_ids with the most bacteria are last. 
-
-      // otuSorted = otuIds.slice(0, 10);
+      var otuIds2 = newResult.otu_ids.slice(0,10).reverse().map(otuTop => "OTU" + otuTop);
       
-      // console.log(otuSorted);
+      var otuLabels2 = newResult.otu_labels.slice(0,10).reverse();
+      
+      var sampleValues2 = newResult.sample_values.slice(0,10).reverse();
 
-      // otuIdsString = otuSorted.map(otuId => "OTU" + otuId);
-
-      // console.log(otuIdsString);
-
+      console.log(otuIds2);
 
       // 8. Create the trace for the bar chart.
       
